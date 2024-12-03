@@ -1,0 +1,94 @@
+//create User
+
+POST http://localhost:3030/api/user/create
+Content-Type: application/json
+
+{
+    "name":"admin1",
+    "email":"admin1@gmail.com",
+    "password":"12345",
+    "confPassword":"12345",
+    "role":"admin"
+}
+
+###
+//get al users
+
+GET  http://localhost:3030/api/user/get
+
+###
+
+//get single user
+GET  http://localhost:3030/api/user/get/bfba6840-7972-4766-ab40-46cfcd52d82b
+
+###
+//update user
+
+PATCH  http://localhost:3030/api/user/update/414e107d-a335-4273-add6-96ed2a1c3b71
+Content-Type: application/json
+
+{
+    "name":"05test",
+    "email":"test05@gmail.com",
+    "password":"123445",
+    "confPassword":"123445",
+    "role":"user"
+}
+
+###
+//delete
+DELETE   http://localhost:3030/api/user/delete/5e1ccdca-de05-4c89-9768-6314e16a871e
+
+###
+//login
+POST http://localhost:3030/api/auth/login
+Content-Type: application/json
+
+{
+    
+    "email":"test03@gmail.com",
+    "password":"12345"
+}
+
+###
+GET http://localhost:3030/api/auth/me
+
+
+//logout
+###
+DELETE  http://localhost:3030/api/auth/logout/eab5390c-2fec-474a-9f44-82271f051a31
+    
+//get all prodcuts
+###
+    
+GET  http://localhost:3030/api/product/get
+
+//get prodcuts by Id
+###
+    
+GET  http://localhost:3030/api/product/get/2ff9f4ec-f4bf-4df7-8e86-1831a88d5bc1
+//post data prodcuts
+###
+POST  http://localhost:3030/api/product/create
+Content-Type: application/json
+
+
+{
+    "name":"pc 1",
+    "price":"4500"
+}
+
+//update data prodcuts
+###
+PATCH   http://localhost:3030/api/product/update/bd2a0b40-80bb-487e-899e-81db2d070afa
+Content-Type: application/json
+
+
+{
+    "name":"andriode",
+    "price":"12,999"
+}
+
+//delete product
+###
+DELETE http://localhost:3030/api/product/delete/bd2a0b40-80bb-487e-899e-81db2d070afa
